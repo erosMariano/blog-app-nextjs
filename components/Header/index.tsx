@@ -1,18 +1,15 @@
 import { Container, MaxContainer, MyInput } from "./styles";
-import { BsFillMoonFill, BsFillSunFill, BsSearch } from "react-icons/bs";
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { useContext, useState } from "react";
 function Header() {
 	const [typeBackground, setTypeBackground] = useState(false);
-	const [inputTamanho, setInputTamanho] = useState("33px");
 
 
 
 	function handleModeTheme() {
 		setTypeBackground(!typeBackground);
 	}
-	function handleInput() {
-		setInputTamanho("200px");
-	}
+
 	return (
 		<Container>
 			<MaxContainer>
@@ -23,15 +20,6 @@ function Header() {
 				</div>
 
 				<div>
-					<div className="search">
-						<BsSearch onClick={handleInput} />
-						<MyInput
-							type="search"
-							className="inputSearch"
-							onClick={handleInput}
-							width={inputTamanho}
-						/>
-					</div>
 					<div className="modeTheme">
 						<button onClick={handleModeTheme}>
 							{typeBackground ? (

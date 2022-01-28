@@ -32,18 +32,14 @@ const Home = ({ posts }: Props) => {
 			<MaxContainerHome>
 				<div className="container-text-home">
 					<h1>
-						Let&apos;s start your{" "}
-						<span style={{ color: "#FF3651" }}>career</span> now!
+						O blog de{" "}
+						<span style={{ color: "#FF3651" }}>Tech</span> com sua cara!
 					</h1>
 					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing
-						elit. Dolorum nobis nisi at, autem quas molestiae.
-						Similique ex consectetur tempore reiciendis, fugiat ea
-						quaerat dolorum dicta cupiditate. Ab quod distinctio
-						iste!
+						Aqui é o ambiente onde você, estudante entusiasta, aluno, professor, ou curioso da tecnologia pode ler sobre as tecnologias e metodologias mais atuais do mercado!
 					</p>
 
-					<Link href="#">Get our app for free</Link>
+					<Link href="#">Começar a ler agora</Link>
 				</div>
 				<ImagePeopleHome />
 			</MaxContainerHome>

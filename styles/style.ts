@@ -13,18 +13,17 @@ export const MaxContainerHome = styled.main`
         width: 50%;
 
         h1{
-            font-size: 4rem;
+            font-size: 3.5rem;
             max-width: 500px;
-            line-height:80px;
+            line-height: 70px;
         }
 
         p{
             font-size: 1rem;
             line-height:30px;
-            margin-top: 40px;
-            margin-bottom: 40px;
+            margin-top: 30px;
+            margin-bottom: 50px;           
             max-width: 600px;
-
         }
         a{
             background-color:#1F1F2E;

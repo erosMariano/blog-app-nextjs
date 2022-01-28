@@ -21,7 +21,7 @@ function ImagePeopleHome() {
 						src="/images/icons/pen.svg"
 						alt=""
 					/>
-					<p>Lorem, ipsum dolor.</p>
+					<p>(UX) User Experience</p>
 				</span>
 
 				<span className="cardHome2">
@@ -31,7 +31,7 @@ function ImagePeopleHome() {
 						src="/images/icons/book.svg"
 						alt=""
 					/>
-					<p>Lorem, ipsum dolor.</p>
+					<p>Front-end Developer</p>
 				</span>
 
 
@@ -42,7 +42,7 @@ function ImagePeopleHome() {
 						src="/images/icons/computer.svg"
 						alt=""
 					/>
-					<p>Lorem, ipsum dolor.</p>
+					<p>Front-end Developer</p>
 				</span>
 
 				<span className="cardHome4">
@@ -52,7 +52,7 @@ function ImagePeopleHome() {
 						src="/images/icons/cloud.svg"
 						alt=""
 					/>
-					<p>Lorem, ipsum dolor.</p>
+					<p>Cloud Computing</p>
 				</span>
 			</div>
 		</Container>

@@ -25,20 +25,6 @@ export const MaxContainer = styled.div`
         }
     }
 
-    .search{
-        cursor: pointer;
-        svg{
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            left: 8px;
-            top: 8px;
-            color: #707070;
-        }
-        margin-right: 20px ;
-
-        position: relative;
-    }
 
     .modeTheme{
         button{
