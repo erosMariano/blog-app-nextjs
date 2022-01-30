@@ -6,6 +6,7 @@ import { Category, Post } from "../../typings";
 import Image from "next/image";
 import PortableText from "react-portable-text";
 import { Article, TypeArticleSlug } from "./styles";
+import Head from "next/head";
 interface Props {
 	post: Post;
 }
@@ -35,59 +36,70 @@ const MyPost = (props: any) => {
 		}
 	});
 	return (
-		<main>
-			<Header />
+		<>
+			<Head>
+				<title>Blog Dev | {post.title}</title>
+			</Head>
+			<main>
+				<Header />
 
-			<Article>
-				<div className="container">
-					<div>
-						<h1>{post.title}</h1>
+				<Article>
+					<div className="container">
+						<div>
+							<h1>{post.title}</h1>
 
-						<div className="type-and-date">
-							<TypeArticleSlug
-								color={typeColor}
-								background={backgroundType}
-							>
-								{typeArticle}
-							</TypeArticleSlug>
-							<p>•</p>
-							<span>
-								{new Date(post._createdAt)
-									.toLocaleString()
-									.substring(0, 10)}
-							</span>
+							<div className="type-and-date">
+								<TypeArticleSlug
+									color={typeColor}
+									background={backgroundType}
+								>
+									{typeArticle}
+								</TypeArticleSlug>
+								<p>•</p>
+								<span>
+									{new Date(post._createdAt)
+										.toLocaleString()
+										.substring(0, 10)}
+								</span>
+							</div>
+						</div>
+
+						<div className="container-img-principal">
+							<Image
+								width={780}
+								height={390}
+								src={urlFor(post.mainImage).url()!}
+								alt="imagem blog"
+							/>
+						</div>
+
+						<div className="containerPortable">
+							<PortableText
+								dataset={
+									process.env.NEXT_PUBLIC_SANITY_DATASET!
+								}
+								projectId={
+									process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
+								}
+								content={post.body}
+								serializers={{
+									h1: (props: any) => <h1 {...props} />,
+									h2: (props: any) => (
+										<h2 className="h2Article" {...props} />
+									),
+									li: ({ children }: any) => (
+										<li>{children}</li>
+									),
+									link: ({ href, children }: any) => (
+										<a href={href}>{children}</a>
+									),
+								}}
+							/>
 						</div>
 					</div>
-
-					<div className="container-img-principal">
-						<Image
-							width={780}
-							height={390}
-							src={urlFor(post.mainImage).url()!}
-							alt="imagem blog"
-						/>
-					</div>
-
-					<div className="containerPortable">
-						<PortableText
-							dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-							projectId={
-								process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
-							}
-							content={post.body}
-							serializers={{
-								h1: (props: any) => <h1 {...props} />,
-								h2: (props: any) => <h2 className="h2Article" {...props} />,
-								li: ({ children }: any) => <li>{children}</li>,
-								link: ({ href, children }: any) => (
-									<a href={href}>{children}</a>
-								),
-							}}
-						/>
-					</div>
-				</div>
-			</Article>
-		</main>
+				</Article>
+			</main>
+		</>
 	);
 };
 

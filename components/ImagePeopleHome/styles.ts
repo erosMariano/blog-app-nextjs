@@ -114,21 +114,15 @@ export const Container = styled.div`
         opacity: 0;
     }
 }
+@media(max-width: 1327px){
+        .center{
+            left: 73%;
+        }
+    }
 
-/* @keyframes animate{
-    0%{
-        box-shadow: 0 0 0 0 rgba(254, 51, 71, 0.7), 0 0 0 0 rgba(254, 51, 71, .7);
+    @media(max-width: 1100px){
+        .center{
+            left: 66%;
+        }
     }
-    40%{
-        box-shadow: 0 0 0 50px rgba(254, 51, 71, 0), 0 0 0 0 rgba(254, 51, 71, .7);
-    }
-    80%{
-        box-shadow: 0 0 0 50px rgba(254, 51, 71, 0), 0 0 0 0 rgba(254, 51, 71, 0);
-    }
-    100%{
-        box-shadow: 0 0 0 0 rgba(254, 51, 71, 0), 0 0 0 0 rgba(254, 51, 71, 0);
-    }
-}
-; */
-
 `

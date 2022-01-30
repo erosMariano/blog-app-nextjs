@@ -9,6 +9,10 @@ export const MaxContainer = styled.div`
     justify-content:space-between;
     max-width: 1200px;
     margin: 0 auto;
+    @media(max-width: 1327px){
+        padding-left: 40px;
+        padding-right: 40px;
+    }
     div{
         display: flex;
         align-items: center;

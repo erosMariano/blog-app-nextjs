@@ -9,6 +9,15 @@ export const MaxContainerHome = styled.main`
     align-items: center;
     height:calc(100vh - 55px);
     position: relative;
+
+    @media(max-width: 1327px){
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media(max-width: 1000px){
+        flex-direction: column;
+    }
     .container-text-home{
         width: 50%;
 
@@ -41,6 +50,19 @@ export const MaxContainerHome = styled.main`
             }
         }
     }
+
+    @media(max-width: 1327px){
+        .container-text-home{
+            width: 40%;
+        }
+    }
+
+    @media(max-width: 1000px){
+        .container-text-home{
+            width: 100%;
+        }
+    }
+
 `
 
 
@@ -84,11 +106,12 @@ export const LinkPost = styled.a`
     &:hover{
         background-color: rgba(255,255,255,.1)
     }
+
 `
 interface PropsTypeArticle {
     color: string;
 }
-export const TypeArticle  = styled.p<PropsTypeArticle>`
+export const TypeArticle = styled.p<PropsTypeArticle>`
     color: ${(props) => props.color};
     margin: 16px 0;
 
@@ -98,3 +121,4 @@ export const TypeArticle  = styled.p<PropsTypeArticle>`
     border-radius: 10px;
 
 `
+
