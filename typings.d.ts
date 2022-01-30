@@ -22,6 +22,7 @@ export interface Post {
     slug: {
         current: string;
     }
+    body: [object]
 }
 
 export interface Category {

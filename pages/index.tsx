@@ -22,7 +22,6 @@ const Home = (props: any) => {
 
 	return (
 		<>
-			<GlobalStyle />
 
 			<Head>
 				<title>Create Next App</title>
@@ -74,7 +73,6 @@ const Home = (props: any) => {
 							}
 						});
 
-						console.log(post.mainImage);
 						return (
 							<Link
 								href={`/posts/${post.slug.current}`}

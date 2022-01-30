@@ -1,10 +1,9 @@
 import { Container, MaxContainer, MyInput } from "./styles";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { useContext, useState } from "react";
+import Link from "next/link";
 function Header() {
 	const [typeBackground, setTypeBackground] = useState(false);
-
-
 
 	function handleModeTheme() {
 		setTypeBackground(!typeBackground);
@@ -14,9 +13,13 @@ function Header() {
 		<Container>
 			<MaxContainer>
 				<div className="logo">
-					<h2>
-						Blog<span>.</span>Dev
-					</h2>
+					<Link href="/">
+						<a>
+							<h2 style={{ cursor: "pointer" }}>
+								Blog<span>.</span>Dev
+							</h2>
+						</a>
+					</Link>
 				</div>
 
 				<div>
