@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+html{
+  scroll-behavior: smooth;
+}
   html,
   body, 
   *{
@@ -19,5 +22,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 `
 export default GlobalStyle;
